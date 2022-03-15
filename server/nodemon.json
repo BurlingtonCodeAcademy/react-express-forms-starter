@@ -1,0 +1,17 @@
+{
+  "verbose": true,
+  "ignore": [
+    ".git",
+    "../client/build/",
+    "node_modules/**/node_modules"
+  ],
+  "events": {
+    "restart": "cd ../client && npm run build > /dev/null"
+  },
+  "watch": [
+    ".",
+    "../client/src/",
+    "../client/public/"
+  ],
+  "ext": "js,json,css,svg"
+}
