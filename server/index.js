@@ -13,9 +13,9 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
-app.post('/contact', function (req, res, next) {
+app.post('/contact', function (req, res) {
   console.log(req.body); // show the body in the console
-  res.json(req.body); // return the body as JSOn in the response
+  res.status(201).json(req.body); // return 201, and the response
 });
 
 app.listen(port);
